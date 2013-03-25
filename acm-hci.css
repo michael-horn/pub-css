@@ -1,0 +1,232 @@
+/*
+ * pub-css
+ * ACM HCI Archival Format
+ *
+ * Created by: Michael S. Horn (michael-horn@northwestern.edu)
+ * Updated: March 21, 2013
+ */
+    
+body {
+   background-color: #888;
+   margin: 0;
+   padding: 0;
+   font-family: 'Times New Roman', Times, serif;
+   color: black;
+   font-size: 10pt;
+   font-weight: normal;
+}
+
+
+.page {
+   display: block;
+   margin: 25px auto 25px auto;
+   padding: 0.85in 0.75in 1in 0.75in;
+   background-color: white;
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+   width: 7in;
+   height: 9.15in;
+   position: relative;
+   overflow: hidden;
+}
+
+
+footer, header {
+   display: block;
+   font-family: Arial, sans-serif;
+   font-size: 9pt;
+   width: 7in;
+   padding: 0;
+   position: absolute;
+   left: 0.75in;
+}
+
+footer { bottom: 0.2in; }
+header { top: 0.2in; }
+
+
+.title {
+   font-family: Arial, helvetica, sans-serif;
+   font-size: 18pt;
+   font-weight: bold;
+   color: black;
+   text-align: center;
+   width: 100%;
+}
+
+
+.authors {
+   font-size: 12pt;
+   font-weight: bold;
+   text-align: center;
+   width: 100%;
+   margin-top: 12pt;
+}
+
+
+.affiliation {
+   font-size: 12pt;
+   font-weight: normal;
+   text-align: center;
+   width: 100%;
+   margin-bottom: 12pt;
+}
+
+
+h1, h2 {
+   font-family: Arial, helvetica, sans-serif;
+   font-size: 9pt;
+   font-weight: bold;
+   margin: 0;
+}
+
+
+h1 {
+   text-transform: uppercase;
+}
+
+
+p {
+   padding: 0 0 6pt 0;
+   margin: 0;
+}
+
+
+div.columns {
+   columns: 3.35in 2;
+   column-gap: 0.3in;
+   -moz-columns: 3.35in 2;
+   -moz-column-gap: 0.3in;
+   -webkit-columns: 3.35in 2;
+   -webkit-column-gap: 0.3in;
+   color: black;
+   text-align: justify;
+   word-spacing: -0.75pt;
+   line-height: 123%;
+/*   line-height: 116%; */
+}
+
+
+.copyright {
+   font-size: 8pt;
+   font-weight: normal;
+   padding: 6pt 0 0 0;
+   position: absolute;
+   left: 0.75in;
+   bottom: 1in;
+   width: 3.35in;
+   color: #333;
+   line-height: 110%;
+}
+
+
+figure {
+   padding: 0;
+   margin: 0;
+   display: block;
+   width: 3.35in;
+   text-align: center;
+}
+
+
+figcaption {
+   font-weight: bold;
+   font-size: 9pt;
+   margin-bottom: 6pt;
+}
+
+.references {
+   margin: 0 0 0 -18px;
+}
+
+.references li {
+   margin: 0 0 2pt 0;
+   padding: 0;
+   font-size: 9.5pt;
+   word-spacing: -1pt;
+   letter-spacing: -0.2pt;
+}
+
+
+cite {
+   font-style: normal;
+}
+
+
+#citation, #reference-details {
+   position: fixed;
+   display: block;
+   width: 6in;
+   margin: 10px 10px 10px 10px;
+   left: 0;
+   top: 0;
+   background-color: rgb(5, 5, 15);
+   border: 1px solid black;
+   padding: 0.25in;
+   font-family: Arial, sans-serif;
+   font-size: 10pt;
+   font-weight: 200;
+   color: white;
+   border-radius: 6px;
+   letter-spacing: 1px;
+   opacity: 0;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;   
+   /* display: none; */
+}
+
+
+#reference-details {
+   left: 0;
+   top: auto;
+   bottom: 0;
+}
+
+
+.pub-css {
+   margin: -10px auto 0 auto;
+   color: #000;
+   font-family: Arial, sans-serif;
+   font-weight: 200;
+   font-size: 10pt;
+   text-align: center;
+}
+
+
+.pub-css a { color: #cc1; }
+.pub-css a:hover { color: #aa0; }
+.pub-css a:active { color: #cc0; }
+
+
+#cite-button, #pdf-button, #share-button {
+   position: fixed;
+   display: block;
+   right: 0;
+   width: 66px;
+   border-radius: 12px 0 0 12px;
+   border: 1px solid rgba(0, 0, 0, 0.4);
+   color: rgba(255, 255, 255, 0.8);
+   font-family: Arial, sans-serif;
+   text-align: center;
+   font-size: 8pt;
+   letter-spacing: 1px;
+   margin: 0;
+   padding: 10px 0 10px 0;
+   outline: 0;
+   text-decoration: none;
+}
+
+#cite-button {
+   top: 25px;
+   background-color: #171;
+}
+
+#pdf-button {
+   top: 70px;
+   background-color: #711;
+}
+
+#share-button {
+   top: 145px;
+   background-color: #117;
+}
