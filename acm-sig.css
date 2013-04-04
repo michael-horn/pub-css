@@ -4,6 +4,7 @@
  *
  * Created by: Michael S. Horn (michael-horn@northwestern.edu)
  * Updated: March 21, 2013
+ * Version: 0.1
  */
     
 body {
@@ -14,7 +15,7 @@ body {
    color: black;
    font-size: 9pt;
    font-weight: normal;
-   counter-reset: ref-counter;
+   counter-reset: section subsection refcounter;
 }
 
 
@@ -65,31 +66,69 @@ header { top: 0.2in; }
 }
 
 
+.email {
+   margin-top: 0;
+   margin-bottom: 16pt;
+}
+
+
 .affiliation {
    font-family: Helvetica, Arial, sans-serif;
    font-size: 10pt;
    font-weight: normal;
    text-align: center;
    width: 100%;
-   margin-bottom: 12pt;
+   margin: 0;
+}
+
+
+h1:before {
+   counter-increment: section;
+   content: counter(section) ".\020";
+}
+
+
+h2:before {
+   counter-increment: subsection;
+   content: counter(section) "." counter(subsection) "\020";
+}
+
+
+h3:before {
+   counter-increment: none;
 }
 
 
 h1, h2 {
    font-size: 12pt;
    font-weight: bold;
-   margin: 6pt 0 0 0;
+   margin: 3pt 0 0 0;
 }
 
 
 h1 {
+   counter-reset: subsection;
    text-transform: uppercase;
 }
 
 
 h3 {
    font-size: 11pt;
+   font-weight: normal;
    font-style: italic;
+   margin: 0;
+}
+
+
+h1.no-number:before {
+   counter-increment: none;
+   content: ""
+}
+
+
+h2.no-number:before {
+   counter-increment: none;
+   content: ""
 }
 
 
@@ -124,6 +163,7 @@ div.columns {
    width: 3.35in;
    color: #333;
    line-height: 110%;
+   text-align: justify;
 }
 
 
@@ -158,8 +198,8 @@ figcaption {
 }
 
 .references li:before {
-   counter-increment: ref-counter;
-   content: "[" counter(ref-counter) "] \020";
+   counter-increment: refcounter;
+   content: "[" counter(refcounter) "] \020";
 }
 
 cite {
