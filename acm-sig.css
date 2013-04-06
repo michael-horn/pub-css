@@ -53,6 +53,7 @@ header { top: 0.2in; }
    color: black;
    text-align: center;
    width: 100%;
+   line-height: 130%;
 }
 
 
@@ -67,8 +68,8 @@ header { top: 0.2in; }
 
 
 .email {
-   margin-top: 0;
-   margin-bottom: 16pt;
+   margin-top: 6pt;
+   margin-bottom: 24pt;
 }
 
 
@@ -81,34 +82,19 @@ header { top: 0.2in; }
    margin: 0;
 }
 
-
-h1:before {
-   counter-increment: section;
-   content: counter(section) ".\020";
-}
-
-
-h2:before {
-   counter-increment: subsection;
-   content: counter(section) "." counter(subsection) "\020";
-}
-
-
-h3:before {
-   counter-increment: none;
-}
-
-
-h1, h2 {
+h1 {
    font-size: 12pt;
    font-weight: bold;
    margin: 3pt 0 0 0;
+   text-transform: uppercase;
+   counter-reset: subsection 0;
 }
 
 
-h1 {
-   counter-reset: subsection;
-   text-transform: uppercase;
+h2 {
+   font-size: 12pt;
+   font-weight: bold;
+   margin: 3pt 0 0 0;
 }
 
 
@@ -117,6 +103,23 @@ h3 {
    font-weight: normal;
    font-style: italic;
    margin: 0;
+}
+
+
+h1:before {
+   counter-increment: section;
+   content: counter(section) "." "\2002";
+}
+
+
+h2:before {
+   counter-increment: subsection;
+   content: counter(section) "." counter(subsection) "\2002";
+}
+
+
+h3:before {
+   counter-increment: none;
 }
 
 
@@ -192,14 +195,20 @@ figcaption {
    margin: 0 0 2pt 0;
    padding-left: 0.25in;
    font-size: 9pt;
-   word-spacing: -0.1pt;
+   word-spacing: -0.2pt;
    letter-spacing: -0.2pt;
-   text-indent: -0.25in;
+   line-height: 110%;
+   position: relative;
+   /*text-indent: -0.25in;*/
 }
 
 .references li:before {
+   padding-left: 0;
    counter-increment: refcounter;
    content: "[" counter(refcounter) "] \020";
+   position: absolute;
+   left: 0;
+   top: 0;
 }
 
 cite {
